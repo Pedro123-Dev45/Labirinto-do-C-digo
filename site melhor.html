@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Povos Indígenas e Africanos no Brasil</title>
+    <link rel="shortcut icon" href="logo site.png" type="image/x-icon">
+    <title>Carrossel de Imagens</title>
+</head>
+<body>
+    <div class="carrossel">
+        <div class="carrossel-imagens">
+            <img src="indigenous-woman-with-headdress-exudes-confidence-generated-by-ai.jpg" alt="Imagem 1">
+            <img src="warrior-leader-from-ancient-maya-inca-lost-empire.jpg" alt="Imagem 2">
+            <img src="young-woman-beauty-portrait-fashion-model-looking-camera-elegance-generated-by-artificial-intellingence.jpg" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrossel-imagens {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-imagens img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+}
+
+header {
+    background: #000000; /* Azul mais escuro */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff5e00; /* Cor de destaque ao passar o mouse */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: #ff002b;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgb(0, 0, 0);
+    max-width: 800px; /* Limitar a largura máxima */
+}
+
+h2 {
+    color: 00d9ff; /* Cor dos títulos */
+}
+
+p {
+    line-height: 1.6; /* Melhorar a legibilidade */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0; /* Espaçamento em torno das imagens */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: 00d9ff(204 0% 20%);
+    color: 00d9ff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block; /* Links em coluna em telas pequenas */
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px; /* Reduzir margem em telas pequenas */
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+    
+        <h1>Povos Indígenas e Africanos no Brasil</h1>
+        <nav>
+            <a href="#indigenas">Povos Indígenas</a>
+            <a href="#africanos">Povos Africanos</a>
+            <a href="#cultura">Cultura</a>
+        </nav>
+    </header>
+    
+    <section id="indigenas">
+        <h2>Povos Indígenas</h2>
+        <p>Os povos indígenas no Brasil são compostos por diversas etnias,cada uma com sua própria cultura,língua e tradições.Eles são os habitantes originais do Brasil e têm uma rica história que remonta a milhares de anos.</p>
+        <img src="indígenas brasil.jpg" alt="Povos Indígenas">
+        <p>Clique aqui para saber mais sobre os povos indígenas no Brasil,acese <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjRyoHj5s2MAxV0XkgAHXt-NuIYABAAGgJjZQ&co=1&gclid=EAIaIQobChMI0cqB4-bNjAMVdF5IAB17fjbiEAAYASAAEgKL7fD_BwE&ohost=www.google.com&cid=CAASJeRo2Bip21ymwimKFCWGetiSJ5yy7mndCEYtawzy9N8qLecp8Ak&sig=AOD64_2nxVJItxCh1_LjVh9h-Gcg7VwCbw&q&adurl&ved=2ahUKEwja8fzi5s2MAxViPrkGHYrYCRUQ0Qx6BAhrEAE" target="_blank">The Nature Conservancy</a>.</p>
+    </section>
+    
+    <section id="africanos">
+        <h2>Povos Africanos</h2>
+        <p>Os povos africanos trouxeram uma rica herança cultural para o Brasil,influenciando a música,a dança,a culinária e as religiões.A diáspora africana é uma parte fundamental da identidade brasileira.</p>
+        <img src="image-5.jpeg" alt="Cultura Africana no Brasil">
+        <p>Para mais informações sobre a cultura africana no Brasil,acesse <a href="https://www.faecpr.edu.br/site/portal_afro_brasileira/2_I.php" target="_blank">Portal da Cultura Afro Brasileira</a>.</p>
+    </section>
+    
+    <section id="cultura">
+        <h2>Cultura e Contribuições</h2>
+        <p>A cultura brasileira é um mosaico de influências indígenas,africanas e europeias.As tradições,festas e a culinária refletem essa diversidade.Exemplos incluem o Carnaval,a capoeira e a culinária afro-brasileira.</p>
+        <img src="a b índio.jpg" alt="Carnaval no Brasil">
+        <p>Descubra mais sobre a cultura desses povos no Brasil,acesse <a href="https://fundacaofhc.org.br/exposicoesvirtuais/indigenas/?gad_source=1&gclid=EAIaIQobChMImbyt4ujNjAMViDlECB1ASjdaEAAYASAAEgLagfD_BwE" target="_blank">Cultura Afro e Indigena No Brasil</a>.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Povos Indígenas e Africanos no Brasil Desenvolvido por Pedro Henrique Martinusso.</p>
+    </footer>
+    </body>
