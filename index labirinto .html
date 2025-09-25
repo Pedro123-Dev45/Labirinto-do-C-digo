@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aprenda programação com exemplos práticos de C, C++, Java, HTML, CSS e JavaScript">
+    <title>Labirinto do Código - Dev</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e1e1e1;
+    line-height: 1.6;
+  }
+  a {
+    color: #61dafb;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 30px 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #61dafb;
+    text-align: center;
+  }
+  header p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    color: #a0a0a0;
+  }
+  /* Navigation */
+  nav {
+    background-color: #1f2a38;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.8);
+    margin-bottom: 40px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li a {
+    display: inline-block;
+    padding: 14px 18px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ccd6f6;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  nav ul li a:hover, nav ul li a:focus {
+    background-color: #61dafb;
+    color: #0b192b;
+  }
+  /* Sections */
+  section {
+    background-color: #1c1f26;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.7);
+  }
+  section h2 {
+    border-bottom: 3px solid #61dafb;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #61dafb;
+  }
+  section h3 {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: #82c7ff;
+  }
+  section p {
+    font-size: 1.05rem;
+    margin-top: 10px;
+    color: #cfcfd1;
+  }
+  /* Code blocks */
+  pre {
+    background-color: #272c34;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px #000000;
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+  code {
+    font-family: 'Fira Mono', 'Courier New', Courier, monospace;
+    color: #d4d4d4;
+  }
+  /* Syntax highlights */
+  .keyword { color: #569cd6; font-weight: 700; }
+  .datatype { color: #4ec9b0; }
+  .string { color: #d69d85; }
+  .comment { color: #6a9955; font-style: italic; }
+  .number { color: #b5cea8; }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #1f2a38;
+    color: #888;
+    border-radius: 10px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+</style>
+    <meta name="theme-color" content="#0077cc">
+</head>
+<body>
+    <header>
+        <h1>Labirinto do Código</h1>
+        <p>Explorando o mundo das linguagens</p>
+    </header>
+    <nav aria-label="Navegação entre linguagens">
+        <ul class="nav-links" style="margin: 0; padding: 10px 0;">
+            <li><a href="#c-language" aria-current="page">C</a></li>
+            <li><a href="#cpp-language">C++</a></li>
+            <li><a href="#java-language">Java</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Sections for each programming language -->
+        <section id="c-language" aria-label="Linguagem C">
+            <h2>Linguagem C - Fundamentos e Prática</h2>
+            <p>A linguagem C é conhecida por sua simplicidade e poder, com uso extensivo em desenvolvimento de sistemas, drivers, e aplicações de alta performance. Foi criada na década de 1970 e ainda é muito relevante hoje.</p>
+            <h3>Características Principais</h3>
+            <ul>
+                <li>Baixo nível, próxima do hardware.</li>
+                <li>Manipulação direta de memória com ponteiros.</li>
+                <li>Sintaxe simples e eficiente.</li>
+                <li>Compilação rápida.</li>
+            </ul>
+            <h3>Exemplo de Código</h3>
+            <div class="code-container">
+                <pre><code class="language-c" aria-label="Exemplo de código em C">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int soma = a + b;
+    printf("Soma: %d\n", soma);
+    return 0;
+}
+</code></pre>
+            <h3>Pontos Importantes para Aprender</h3>
+            <ol>
+                <li>Tipos de dados e operadores</li>
+                <li>Controle de fluxo (if, switch, loops)</li>
+                <li>Funções e recursão</li>
+                <li>Ponteiros e alocação dinâmica</li>
+                <li>Manipulação de arquivos</li>
+            </ol>
+        </section>
+        <!-- Additional sections for C++, Java, HTML, CSS, and JavaScript -->
+        <!-- ... (similar structure for other languages) ... -->
+        <section id="javascript" aria-label="Linguagem JavaScript">
+            <h2>JavaScript - A Linguagem da Web Dinâmica</h2>
+            <p>JavaScript é a linguagem que traz interatividade às páginas web. Executado no navegador, permite manipular o DOM, validar formulários, criar animações e muito mais.</p>
+            <h3>Fundamentos</h3>
+            <ul>
+                <li>Variáveis, tipos e operadores</li>
+                <li>Funções, escopo e closures</li>
+                <li>Manipulação do DOM</li>
+                <li>Eventos e assincronismo (Promises, async/await)</li>
+            </ul>
+            <h3>Demo Interativo</h3>
+            <div class="js-demo">
+                <pre><code class="language-js">// Demo interativo com JavaScript
+// Código completo está no script da página</code></pre>
+                <div class="demo-controls">
+                    <button id="changeTextButton" aria-label="Mudar texto demonstrativo">
+                        Clique para alterar <span id="click-count" style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px;">(0 clicks)</span>
+                    </button>
+                    <button id="resetDemo" 
+                            style="background: #1a3fb8; color: white; border: none; padding: 10px 20px; border-radius: 30px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 6px rgba(26,63,184,0.2); transition: all 0.3s ease;"
+                            aria-label="Resetar demonstração"
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 8px rgba(26,63,184,0.3)'"
+                            onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(26,63,184,0.2)'">
+                        Resetar
+                    </button>
+                </div>
+                <div id="demo" aria-live="polite"></div>
+            </div>
+            <h3>Conselhos para Aprender</h3>
+            <ol>
+                <li>Domine o básico antes de avançar para frameworks</li>
+                <li>Pratique manipulação DOM e eventos</li>
+                <li>Aprenda boas práticas de ES6+</li>
+                <li>Explore AJAX e APIs REST</li>
+            </ol>
+        </section>
+    </div>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>Labirinto do Código &copy; <span id="current-year">2025</span> - Todos os direitos reservados</p>
+            <p>Criado por: <strong><em>Pedro H. Martinusso</em></strong></p>
+        </div>
+    </footer>
+    <script>
+        const messages = [
+            "Clique novamente!",
+            "JavaScript é incrível!",
+            "Você controla o DOM!",
+            "Texto modificado!",
+            "Fim do ciclo!"
+        ];
+        let counter = 0;
+
+        function changeText() {
+            const demoElement = document.getElementById('demo');
+            const clickCount = document.getElementById('click-count');
+            
+            demoElement.textContent = messages[counter % messages.length];
+            demoElement.style.color = `hsl(${counter * 72}, 80%, 50%)`;
+            counter++;
+            
+            clickCount.textContent = `(${counter} ${counter === 1 ? 'click' : 'clicks'})`;
+            
+            if (counter >= messages.length) {
+                document.getElementById('changeTextButton').disabled = true;
+            }
+        }
+
+        function resetDemo() {
+            counter = 0;
+            const demoElement = document.getElementById('demo');
+            demoElement.textContent = '';
+            document.getElementById('click-count').textContent = '(0 clicks)';
+            document.getElementById('changeTextButton').disabled = false;
+        }
+
+        document.getElementById('changeTextButton').addEventListener('click', changeText);
+        document.getElementById('resetDemo').addEventListener('click', resetDemo);
+    </script>
+</body>
+</html>
